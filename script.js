@@ -36,5 +36,33 @@ planWorkday.forEach(function(timeBlock, index) {
     //ROWS
     $('.container').append(row);
 });
+//Colours:Past-Present-Future
+function colorRow(time) {
+    var planRightNow = moment(rightNow, 'H A');
+    var planInput = moment(time, 'H A');
+    if (planRightNow.isBefore(planInput)=== true) {
+        return "future";
+    } else if (planRightNow.isAfter (planInput)=== true) {
+        return "past";
+    } else {
+        return "present";
+    }
+}
+//Save Events
+$(".saveBtn").on("click", function() {
+    var blockID = parseInt(
+        $(this)
+                .closest(".timeblock")
+                .attr("id")
+    );
+    var userInput = $.trim(
+       $(this)
+                .parent()
+                .siblings("textarea")
+                .val() 
+    );
+    planWorkday[blockID].event = userInput;
 
+    localStorage.setItem(workDay, JSON.stringify(planWorkday));
+    });
 });
