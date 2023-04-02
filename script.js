@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() {});
 //Variables
 var today = moment().format('dddd, MMM Do');
     //Hours (24 hour time) & am/pm
@@ -20,18 +20,18 @@ var workingHours = [
 ]
 
 //Local Storage
-var dayEvents = JSON.parse(localStorage.getItem("workDay"));
+var dayEvents = JSON.parse(localStorage.getItem("workingDay"));
 if (dayEvents) {
-    planWorkday = dayEvents;
+    workingHours = dayEvents;
 }
 //Present-day
 $('#present-day').text(today);
 
-planWorkday.forEach(function(timeBlock, index) {
+workingHours.forEach(function(timeBlock, index) {
     var timeLabel = timeBlock.time;
     var colorArea = colorRow(timeLabel);
     var row=
-    `<div class="time-block" id="${index}"><div class="row no-gutters input-group"><div class="col-sm col-lg-1 input-group-prepend hour justify-content-sm-end pr-3 pt-3">${timeLabel}</div><textarea class="form-control ${blockColor}">${timeBlock.event}</textarea><div class="col-sm col-lg-1 input-group-append"><button class="saveBtn btn-block" type="submit"><i class="fas fa-bookmark"></i></button></div></div></div>`;
+    `<div class="time_block" id="${index}"><div class="row no-gutters input-group"><div class="col-sm col-lg-1 input-group-prepend hour justify-content-sm-end pr-3 pt-3">${timeLabel}</div><textarea class="form-control ${colorArea}">${timeBlock.event}</textarea><div class="col-sm col-lg-1 input-group-append"><button class="saveBtn btn-block" type="submit"><i class="fas fa-bookmark"></i></button></div></div></div>`;
 
     //ROWS
     $('.container').append(row);
@@ -61,8 +61,7 @@ $(".saveBtn").on("click", function() {
                 .siblings("textarea")
                 .val() 
     );
-    planWorkday[blockID].event = userInput;
+    workingHours[blockID].event = userInput;
 
-    localStorage.setItem(workDay, JSON.stringify(planWorkday));
-    });
+    localStorage.setItem("workingDay", JSON.stringify(workingHours));
 });
