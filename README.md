@@ -54,8 +54,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## Tests
+## Languages
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+
+
 
 [def]: README-IMAGE.png

@@ -40,9 +40,9 @@ workingHours.forEach(function(timeBlock, index) {
 function colorRow(time) {
     var planRightNow = moment(rightNow, 'H A');
     var planInput = moment(time, 'H A');
-    if (planRightNow.isBefore(planInput)=== true) {
+    if (planRightNow.isBefore(planInput) === true) {
         return "future";
-    } else if (planRightNow.isAfter (planInput)=== true) {
+    } else if (planRightNow.isAfter (planInput) === true) {
         return "past";
     } else {
         return "present";
@@ -52,7 +52,7 @@ function colorRow(time) {
 $(".saveBtn").on("click", function() {
     var blockID = parseInt(
         $(this)
-                .closest(".timeblock")
+                .closest(".time-block")
                 .attr("id")
     );
     var userInput = $.trim(
@@ -61,7 +61,7 @@ $(".saveBtn").on("click", function() {
                 .siblings("textarea")
                 .val() 
     );
-    workingHours[blockID].event = userInput;
+    workingHours[blockID].event= userInput;
 
     localStorage.setItem("workingDay", JSON.stringify(workingHours));
 });
