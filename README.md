@@ -2,7 +2,7 @@
 Simple calendar application that allows a user to save events for each hour of the day.
 
 
-- <!--What was your motivation?
+- <!--What was your motivation?-->
 Nowadays, people' day to day consist to switch from one taks to the following one
 - <!--Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
 This small planner, is just a little bit of help to be more organised, and make the best of the user's time.
