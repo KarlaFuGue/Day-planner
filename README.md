@@ -4,9 +4,9 @@ Simple calendar application that allows a user to save events for each hour of t
 
 - <!--What was your motivation?-->
 Nowadays, people' day to day consist to switch from one taks to the following one
-- <!--Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+- <!--Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")-->
 This small planner, is just a little bit of help to be more organised, and make the best of the user's time.
-- <!--What problem does it solve?
+- <!--What problem does it solve?-->
 The planner will help the user to manage time effecively 
 
 ## Installation
@@ -22,7 +22,7 @@ This application run in the browser, so no installation needed.
 5. Clicking the save icon, the event will be saven in the local storage.
 
 
-    ![image](README-IMAGE.png)
+    ![image](PLANNER.png)
 
 ## Credits
 
@@ -55,8 +55,12 @@ SOFTWARE.
 
 
 ## Languages
+HTML
+CSS
+JavaScript
+jQuery
+Bootstrap
+w3school:font awesome
 
 
-
-
-[def]: README-IMAGE.png
+[def]: PLANNER.png
